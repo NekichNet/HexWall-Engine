@@ -1,4 +1,4 @@
-# VoxelWall-Engine
+# BoxWall-Engine
 
 A game engine includes isometric camera class implemented with glfw library, level-by-level gameplay, easy customizable physics for simple shaped objects, input-listener, and editor app for objects, structures and levels.
 
