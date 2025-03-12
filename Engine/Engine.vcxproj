@@ -133,17 +133,30 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Geometry\Shape\Sphere3d\Sphere3d.hpp" />
+    <ClInclude Include="src\Geometry\Shape\Rect2d\Rect2d.hpp" />
+    <ClInclude Include="src\Geometry\Shape\Point\Point2d\Point2d.hpp" />
+    <ClInclude Include="src\Geometry\Shape\Circle2d\Circle2d.hpp" />
+    <ClInclude Include="src\Geometry\Shape\Box3d\Box3d.hpp" />
     <ClInclude Include="src\Camera\IsometricCamera\IsometricCamera.hpp" />
     <ClInclude Include="src\Camera\iCamera.hpp" />
     <ClInclude Include="src\Effect\iEffect.hpp" />
     <ClInclude Include="src\Geometry\Shape\iShape.hpp" />
-    <ClInclude Include="src\Geometry\Vector\Vector3d.hpp" />
+    <ClInclude Include="src\Geometry\Shape\Point\iPoint.hpp" />
+    <ClInclude Include="src\Geometry\Shape\Point\Point3d\Point3d.hpp" />
+    <ClInclude Include="src\Geometry\Vector3d\Vector3d.hpp" />
     <ClInclude Include="src\Object\Object.hpp" />
     <ClInclude Include="src\PhysicsModel\iPhysicsModel.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Geometry\Shape\Sphere3d\Sphere3d.cpp" />
+    <ClCompile Include="src\Geometry\Shape\Rect2d\Rect2d.cpp" />
+    <ClCompile Include="src\Geometry\Shape\Point\Point2d\Point2d.cpp" />
+    <ClCompile Include="src\Geometry\Shape\Circle2d\Circle2d.cpp" />
+    <ClCompile Include="src\Geometry\Shape\Box3d\Box3d.cpp" />
     <ClCompile Include="src\Camera\IsometricCamera\IsometricCamera.cpp" />
-    <ClCompile Include="src\Geometry\Vector\Vector3d.cpp" />
+    <ClCompile Include="src\Geometry\Shape\Point\Point3d\Point3d.cpp" />
+    <ClCompile Include="src\Geometry\Vector3d\Vector3d.cpp" />
     <ClCompile Include="src\Object\Object.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
