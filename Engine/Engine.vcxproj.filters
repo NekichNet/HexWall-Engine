@@ -21,7 +21,7 @@
     <ClInclude Include="src\Object\Object.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="src\PhysicsModel\iPhysicsModel.hpp">
+    <ClInclude Include="src\PhysicsModel\PhysicsModel.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="src\Effect\iEffect.hpp">
@@ -36,7 +36,7 @@
     <ClInclude Include="src\Geometry\Shape\iShape.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="src\Geometry\Shape\Point\iPoint.hpp">
+    <ClInclude Include="src\Geometry\Point\iPoint.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="src\Geometry\Shape\Box3d\Box3d.hpp">
@@ -45,16 +45,22 @@
     <ClInclude Include="src\Geometry\Shape\Circle2d\Circle2d.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="src\Geometry\Shape\Point\Point2d\Point2d.hpp">
+    <ClInclude Include="src\Geometry\Point\Point2d\Point2d.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="src\Geometry\Shape\Point\Point3d\Point3d.hpp">
+    <ClInclude Include="src\Geometry\Point\Point3d\Point3d.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="src\Geometry\Shape\Rect2d\Rect2d.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="src\Geometry\Shape\Sphere3d\Sphere3d.hpp">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PhysicsModel\CompletelyPhysical\CompletelyPhysical.hpp">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Geometry\Axis3d.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
@@ -74,16 +80,22 @@
     <ClCompile Include="src\Geometry\Shape\Circle2d\Circle2d.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="src\Geometry\Shape\Point\Point2d\Point2d.cpp">
+    <ClCompile Include="src\Geometry\Point\Point2d\Point2d.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="src\Geometry\Shape\Point\Point3d\Point3d.cpp">
+    <ClCompile Include="src\Geometry\Point\Point3d\Point3d.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="src\Geometry\Shape\Rect2d\Rect2d.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="src\Geometry\Shape\Sphere3d\Sphere3d.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PhysicsModel\CompletelyPhysical\CompletelyPhysical.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PhysicsModel\PhysicsModel.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,4 +1,4 @@
-#include "Point/iPoint.hpp"
+#include "../Point/iPoint.hpp"
 
 #ifndef ISHAPE_HPP
 #define ISHAPE_HPP
