@@ -134,6 +134,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Geometry\Axis3d.hpp" />
+    <ClInclude Include="src\Geometry\Line\iLine.hpp" />
+    <ClInclude Include="src\Geometry\Line\Line2d\Line2d.hpp" />
+    <ClInclude Include="src\Geometry\Line\Line3d\Line3d.hpp" />
     <ClInclude Include="src\PhysicsModel\CompletelyPhysical\CompletelyPhysical.hpp" />
     <ClInclude Include="src\Geometry\Shape\Sphere3d\Sphere3d.hpp" />
     <ClInclude Include="src\Geometry\Shape\Rect2d\Rect2d.hpp" />
@@ -151,6 +154,8 @@
     <ClInclude Include="src\PhysicsModel\PhysicsModel.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Geometry\Line\Line2d\Line2d.cpp" />
+    <ClCompile Include="src\Geometry\Line\Line3d\Line3d.cpp" />
     <ClCompile Include="src\PhysicsModel\CompletelyPhysical\CompletelyPhysical.cpp" />
     <ClCompile Include="src\Geometry\Shape\Sphere3d\Sphere3d.cpp" />
     <ClCompile Include="src\Geometry\Shape\Rect2d\Rect2d.cpp" />

@@ -1,25 +1,25 @@
-#include "../Point/Point3d/Point3d.hpp"
-
 #ifndef VECTOR3D_HPP
 #define VECTOR3D_HPP
+
+#include "../Point/Point3d/Point3d.hpp"
+#include "../Line/Line3d/Line3d.hpp"
+#include "../Axis3d.hpp"
 
 namespace geom {
 	struct Vector3d {
 	public:
 		Vector3d(int x, int y, int z) : x_(x), y_(y), z_(z) {}
 
-		/*
-		// get or set axis values
-		int& operator[](const Axis3d& axis) noexcept;
-		const int& operator[](const Axis3d& axis) const noexcept;
-		*/
-
+		void cord(AXIS3D axis, int value);
+		int cord(AXIS3D axis) const;
 		void x(int value);
 		int x() const;
 		void y(int value);
 		int y() const;
 		void z(int value);
 		int z() const;
+
+		const Line3d& toLine() const;
 
 		friend const Vector3d& operator+(const Vector3d& a, const Vector3d& b);
 		friend const Vector3d& operator+(const Vector3d& a, int b);
