@@ -1,7 +1,6 @@
 #include <vector>
 #include <string>
-#include "../Geometry/Vector3d/Vector3d.hpp"
-#include "../Geometry/Shape/iShape.hpp"
+#include "../Geometry/Vector/Vector.hpp"
 #include "../PhysicsModel/PhysicsModel.hpp"
 #include "../Effect/iEffect.hpp"
 
@@ -13,9 +12,6 @@ public:
 	// ToDo: constructors and sprites for objects
 
 	/* Getters & Setters */
-
-	void shape(geom::iShape& value);
-	geom::iShape& shape() const;
 
 	void physicsModel(PhysicsModel& value);
 	PhysicsModel& physicsModel() const;
@@ -32,7 +28,6 @@ public:
 		std::vector<std::string> ignore = std::vector<std::string>());
 
 protected:
-	geom::iShape* shape_; // shape object type
 	PhysicsModel* physicsModel_; // physics calculation strategy
 	std::vector<iEffect> effects_; // list of effects, currently applied
 };
