@@ -1,6 +1,6 @@
 # BoxWall-Engine
 
-A game engine includes isometric camera class implemented with glfw library, level-by-level gameplay, easy customizable physics for simple shaped objects, input-listener, and editor app for objects, structures and levels.
+A game engine includes isometric camera class implemented with glfw library, hexagonal metric system, level-by-level gameplay, easy customizable physics for hex-shaped objects, input-listener, and editor app for objects, structures and levels.
 
 I prefer GLFW as graphic library and [FMOD-Audio-Engine](https://github.com/rosshoyt/FMOD-Audio-Engine) because of simple implementation and due to the amount of reference material.
 
@@ -14,12 +14,6 @@ You can track developing progress with [Kanban board](https://evstropov.kaiten.r
 ## Features done:
 
 Nothing, just started.
-
-## Demo references:
-
-![Structures constructor](Demo%20references/11_02_редактор_структур.png "Structures constructor")
-![Objects editor](Demo%20references/11_02_редактор_объектов.png "Objects editor")
-![Engine test demo](Demo%20references/11_02_демо_движка.png "Engine test")
 
 ## Info for developers/contributors:
 - Release versions contained in *master*;
