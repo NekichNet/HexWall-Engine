@@ -1,4 +1,4 @@
-# BoxWall-Engine
+# HexWall-Engine
 
 A game engine includes isometric camera class implemented with glfw library, hexagonal metric system, level-by-level gameplay, easy customizable physics for hex-shaped objects, input-listener, and editor app for objects, structures and levels.
 
