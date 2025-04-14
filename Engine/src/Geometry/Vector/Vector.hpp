@@ -10,6 +10,8 @@ namespace geom {
 	public:
 		Vector(int x, int y, int z, int q)
 			: x_(x), y_(y), z_(z), q_(q) {}
+		Vector(const Point& point);
+		Vector(const Line& line);
 
 		void cord(AXIS axis, int value);
 		int cord(AXIS axis) const;
@@ -24,6 +26,9 @@ namespace geom {
 
 		const Line& toLine() const;
 		const Point& toPoint() const;
+
+		void fromLine(const Line& line);
+		void fromPoint(const Point& point);
 
 		friend const Vector& operator+(const Vector& a, const Vector& b);
 		friend const Vector& operator+(const Vector& a, int b);

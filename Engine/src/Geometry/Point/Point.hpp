@@ -21,6 +21,8 @@ namespace geom {
 		void q(int value);
 		int q() const;
 
+		const Vector& toVector();
+
 		void copy(const Point& other);
 		void copy(Point&& other);
 		unsigned int getDistance(const Point& obj) const;
