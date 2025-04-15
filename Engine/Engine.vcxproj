@@ -133,12 +133,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Geometry\Rect\Rect.hpp" />
-    <ClInclude Include="src\Geometry\Plane\Plane.hpp" />
-    <ClInclude Include="src\Geometry\ParallelRect\ParallelRect.hpp" />
-    <ClInclude Include="src\Geometry\ParallelPlane\ParallelPlane.hpp" />
+    <ClInclude Include="src\Geometry\iEndless.hpp" />
+    <ClInclude Include="src\Geometry\iParallel.hpp" />
+    <ClInclude Include="src\Geometry\Line\iLine.hpp" />
+    <ClInclude Include="src\Geometry\Rect\iRect.hpp" />
+    <ClInclude Include="src\Geometry\Rect\Rect\Rect.hpp" />
+    <ClInclude Include="src\Geometry\Rect\Plane\Plane.hpp" />
+    <ClInclude Include="src\Geometry\Rect\ParallelRect\ParallelRect.hpp" />
+    <ClInclude Include="src\Geometry\Rect\ParallelPlane\ParallelPlane.hpp" />
     <ClInclude Include="src\Geometry\Axis.hpp" />
-    <ClInclude Include="src\Geometry\Line\Line.hpp" />
+    <ClInclude Include="src\Geometry\Line\Line\Line.hpp" />
+    <ClInclude Include="src\Geometry\Line\Straight\Straight.hpp" />
+    <ClInclude Include="src\Math\Math.hpp" />
     <ClInclude Include="src\PhysicsModel\CompletelyPhysical\CompletelyPhysical.hpp" />
     <ClInclude Include="src\Camera\IsometricCamera\IsometricCamera.hpp" />
     <ClInclude Include="src\Camera\iCamera.hpp" />
@@ -149,11 +155,12 @@
     <ClInclude Include="src\PhysicsModel\PhysicsModel.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Geometry\Rect\Rect.cpp" />
-    <ClCompile Include="src\Geometry\Plane\Plane.cpp" />
-    <ClCompile Include="src\Geometry\ParallelRect\ParallelRect.cpp" />
-    <ClCompile Include="src\Geometry\ParallelPlane\ParallelPlane.cpp" />
-    <ClCompile Include="src\Geometry\Line\Line.cpp" />
+    <ClCompile Include="src\Geometry\Rect\Rect\Rect.cpp" />
+    <ClCompile Include="src\Geometry\Rect\Plane\Plane.cpp" />
+    <ClCompile Include="src\Geometry\Rect\ParallelRect\ParallelRect.cpp" />
+    <ClCompile Include="src\Geometry\Rect\ParallelPlane\ParallelPlane.cpp" />
+    <ClCompile Include="src\Geometry\Line\Line\Line.cpp" />
+    <ClCompile Include="src\Geometry\Line\Straight\Straight.cpp" />
     <ClCompile Include="src\PhysicsModel\CompletelyPhysical\CompletelyPhysical.cpp" />
     <ClCompile Include="src\Camera\IsometricCamera\IsometricCamera.cpp" />
     <ClCompile Include="src\Geometry\Point\Point.cpp" />

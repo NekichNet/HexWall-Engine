@@ -26,9 +26,11 @@ namespace geom {
 		void copy(const Point& other);
 		void copy(Point&& other);
 		unsigned int getDistance(const Point& obj) const;
-		unsigned int getDistance(const Line& obj) const;
+		unsigned int getDistance(const Straight& obj) const;
+		unsigned int getDistanceHorizontal(const Point& obj) const;
+		unsigned int getDistanceHorizontal(const Straight& obj) const;
 		const Vector& getRelative(const Point& obj) const;
-		const Vector& getRelative(const Line& obj) const;
+		const Vector& getRelative(const Straight& obj) const;
 		const Point& createRelative(const Vector& vector) const;
 		const Point& createRelative(float angle, unsigned int distance) const;
 	private:
