@@ -26,7 +26,7 @@ const geom::Point& geom::Line::end() const
 	return end_;
 }
 
-geom::Vector geom::Line::toVector(bool head_to_first) const
+const geom::Vector& geom::Line::toVector(bool head_to_first=false) const
 {
-	return geom::Vector();
+	return *(new geom::Vector(*this, head_to_first));
 }

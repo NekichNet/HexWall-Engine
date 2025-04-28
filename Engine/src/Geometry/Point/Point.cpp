@@ -26,6 +26,8 @@ void geom::Point::cord(AXIS axis, unsigned int value)
         y_ = value; break;
     case geom::AXIS::Z:
         z_ = value; break;
+    case geom::AXIS::Q:
+        q_ = value; break;
     }
 }
 
@@ -37,6 +39,19 @@ void geom::Point::z(int value) { z_ = value; }
 int geom::Point::z() const { return z_; }
 void geom::Point::q(int value) { q_ = value; }
 int geom::Point::q() const { return q_; }
+
+const geom::Vector& geom::Point::toVector()
+{
+    return *(new Vector(*this));
+}
+
+void geom::Point::copy(const Point& other)
+{
+    x_ = other.x();
+    y_ = other.y();
+    z_ = other.z();
+    q_ = other.q();
+}
 
 unsigned int geom::Point::getDistance(const Point& obj) const
 {

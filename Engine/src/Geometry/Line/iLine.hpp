@@ -12,8 +12,11 @@ namespace geom {
 		const Point& start() const;
 		void end(const Point& point);
 		const Point& end() const;
+		
+		void reverse();
+		iLine reversed();
 
-		Vector toVector(bool head_to_start) const;
+		Vector toVector(bool head_to_start=false) const;
 	};
 }
 

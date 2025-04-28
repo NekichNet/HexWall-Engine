@@ -2,7 +2,9 @@
 #define VECTOR_HPP
 
 #include "../Point/Point.hpp"
-#include "../Line/Line.hpp"
+#include "../Line/iLine.hpp"
+#include "../Line/Line/Line.hpp"
+#include "../Line/Straight/Straight.hpp"
 #include "../Axis.hpp"
 
 namespace geom {
@@ -11,7 +13,7 @@ namespace geom {
 		Vector(int x, int y, int z, int q)
 			: x_(x), y_(y), z_(z), q_(q) {}
 		Vector(const Point& point);
-		Vector(const iLine& line);
+		Vector(const iLine& line, bool head_to_start=false);
 
 		void cord(AXIS axis, int value);
 		int cord(AXIS axis) const;
@@ -24,10 +26,11 @@ namespace geom {
 		void q(int value);
 		int q() const;
 
-		const Straight& toLine() const;
+		const Line& toLine() const; 
+		const Straight& toStraight() const;
 		const Point& toPoint() const;
 
-		void fromLine(const Straight& line);
+		void fromLine(const iLine& line);
 		void fromPoint(const Point& point);
 
 		friend const Vector& operator+(const Vector& a, const Vector& b);
