@@ -1,12 +1,6 @@
 #include "Line.hpp"
 
-void geom::Line::set(const Point& start, const Point& end)
-{
-	start_ = start;
-	end_ = end;
-}
-
-void geom::Line::start(const Point& point)
+const geom::Line& geom::Line::start(const Point& point)
 {
 	start_ = point;
 }
@@ -16,7 +10,7 @@ const geom::Point& geom::Line::start() const
 	return start_;
 }
 
-void geom::Line::end(const Point& point)
+const geom::Line& geom::Line::end(const Point& point)
 {
 	end_ = point;
 }

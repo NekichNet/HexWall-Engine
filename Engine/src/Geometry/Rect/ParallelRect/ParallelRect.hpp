@@ -1,12 +1,12 @@
 #ifndef PARALLELRECT_HPP
 #define PARALLELRECT_HPP
 
-#include "../iRect.hpp"
+#include "../Rect.hpp"
 #include "../../iParallel.hpp"
 
 namespace geom {
 	template<AXIS axis>
-	struct ParallelRect : iRect, iParallel<axis>
+	struct ParallelRect : Rect, iParallel<axis>
 	{
 
 	};

@@ -5,19 +5,7 @@
 
 using namespace engine_math;
 
-int geom::Point::cord(AXIS axis)
-{
-    switch (axis) {
-    case geom::AXIS::X:
-        return x_;
-    case geom::AXIS::Y:
-        return y_;
-    case geom::AXIS::Z:
-        return z_;
-    }
-}
-
-void geom::Point::cord(AXIS axis, unsigned int value)
+const geom::Point& geom::Point::cord(AXIS axis, unsigned int value)
 {
     switch (axis) {
     case geom::AXIS::X:
@@ -31,13 +19,27 @@ void geom::Point::cord(AXIS axis, unsigned int value)
     }
 }
 
-void geom::Point::x(int value) { x_ = value; }
+int geom::Point::cord(AXIS axis)
+{
+    switch (axis) {
+    case geom::AXIS::X:
+        return x_;
+    case geom::AXIS::Y:
+        return y_;
+    case geom::AXIS::Z:
+        return z_;
+    case geom::AXIS::Q:
+        return q_;
+    }
+}
+
+const geom::Point& geom::Point::x(int value) { x_ = value; }
 int geom::Point::x() const { return x_; }
-void geom::Point::y(int value) { y_ = value; }
+const geom::Point& geom::Point::y(int value) { y_ = value; }
 int geom::Point::y() const { return y_; }
-void geom::Point::z(int value) { z_ = value; }
+const geom::Point& geom::Point::z(int value) { z_ = value; }
 int geom::Point::z() const { return z_; }
-void geom::Point::q(int value) { q_ = value; }
+const geom::Point& geom::Point::q(int value) { q_ = value; }
 int geom::Point::q() const { return q_; }
 
 const geom::Vector& geom::Point::toVector()
@@ -45,7 +47,7 @@ const geom::Vector& geom::Point::toVector()
     return *(new Vector(*this));
 }
 
-void geom::Point::copy(const Point& other)
+const geom::Point& geom::Point::copy(const Point& other)
 {
     x_ = other.x();
     y_ = other.y();
