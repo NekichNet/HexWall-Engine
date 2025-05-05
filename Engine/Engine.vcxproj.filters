@@ -33,7 +33,7 @@
     <ClInclude Include="src\Camera\IsometricCamera\IsometricCamera.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="src\PhysicsModel\CompletelyPhysical\CompletelyPhysical.hpp">
+    <ClInclude Include="src\PhysicsModel\Physical\CompletelyPhysical.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="src\Geometry\Axis.hpp">
@@ -80,7 +80,7 @@
     <ClCompile Include="src\Camera\IsometricCamera\IsometricCamera.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="src\PhysicsModel\CompletelyPhysical\CompletelyPhysical.cpp">
+    <ClCompile Include="src\PhysicsModel\Physical\CompletelyPhysical.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="src\PhysicsModel\PhysicsModel.cpp">

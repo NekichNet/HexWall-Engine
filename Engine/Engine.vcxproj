@@ -143,7 +143,7 @@
     <ClInclude Include="src\Geometry\Axis.hpp" />
     <ClInclude Include="src\Geometry\Line\Line.hpp" />
     <ClInclude Include="src\Math\Math.hpp" />
-    <ClInclude Include="src\PhysicsModel\CompletelyPhysical\CompletelyPhysical.hpp" />
+    <ClInclude Include="src\PhysicsModel\Physical\CompletelyPhysical.hpp" />
     <ClInclude Include="src\Camera\IsometricCamera\IsometricCamera.hpp" />
     <ClInclude Include="src\Camera\iCamera.hpp" />
     <ClInclude Include="src\Effect\iEffect.hpp" />
@@ -160,7 +160,7 @@
     <ClCompile Include="src\Geometry\Rect\Rect.cpp" />
     <ClCompile Include="src\Geometry\Rect\ParallelRect\ParallelRect.cpp" />
     <ClCompile Include="src\Geometry\Line\Line.cpp" />
-    <ClCompile Include="src\PhysicsModel\CompletelyPhysical\CompletelyPhysical.cpp" />
+    <ClCompile Include="src\PhysicsModel\Physical\CompletelyPhysical.cpp" />
     <ClCompile Include="src\Camera\IsometricCamera\IsometricCamera.cpp" />
     <ClCompile Include="src\Geometry\Point\Point.cpp" />
     <ClCompile Include="src\Geometry\Vector\Vector.cpp" />
