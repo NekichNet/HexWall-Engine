@@ -28,8 +28,8 @@ namespace geom {
 		const Line& toLine() const;
 		const Point& toPoint() const;
 
-		const Vector& fromLine(const Line& line);
-		const Vector& fromPoint(const Point& point);
+		void fromLine(const Line& line, bool head_to_start = false);
+		void fromPoint(const Point& point);
 
 		const Vector& distance(unsigned int value);
 		unsigned int distance() const;
@@ -61,12 +61,6 @@ namespace geom {
 
 		Vector& operator/=(const Vector& other);
 		Vector& operator/=(float other);
-
-		Vector& operator++();
-		Vector& operator++(int);
-
-		Vector& operator--();
-		Vector& operator--(int);
 	private:
 		int x_, y_, z_, q_;
 	};

@@ -134,31 +134,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Geometry\Hexagon\Hexagon.hpp" />
-    <ClInclude Include="src\Geometry\Closest\Closest.hpp" />
-    <ClInclude Include="src\Geometry\Cylinder\Cylinder.hpp" />
-    <ClInclude Include="src\Geometry\Sphere\Sphere.hpp" />
-    <ClInclude Include="src\Geometry\iParallel.hpp" />
-    <ClInclude Include="src\Geometry\Rect\Rect.hpp" />
-    <ClInclude Include="src\Geometry\Rect\ParallelRect\ParallelRect.hpp" />
     <ClInclude Include="src\Geometry\Axis.hpp" />
     <ClInclude Include="src\Geometry\Line\Line.hpp" />
     <ClInclude Include="src\Math\Math.hpp" />
     <ClInclude Include="src\PhysicsModel\Physical\CompletelyPhysical.hpp" />
     <ClInclude Include="src\Camera\IsometricCamera\IsometricCamera.hpp" />
     <ClInclude Include="src\Camera\iCamera.hpp" />
-    <ClInclude Include="src\Effect\iEffect.hpp" />
+    <ClInclude Include="src\State\iState.hpp" />
     <ClInclude Include="src\Geometry\Point\Point.hpp" />
     <ClInclude Include="src\Geometry\Vector\Vector.hpp" />
     <ClInclude Include="src\Object\Object.hpp" />
     <ClInclude Include="src\PhysicsModel\PhysicsModel.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Geometry\Closest\Closest.cpp" />
-    <ClCompile Include="src\Geometry\Cylinder\Cylinder.cpp" />
     <ClCompile Include="src\Geometry\Hexagon\Hexagon.cpp" />
-    <ClCompile Include="src\Geometry\Sphere\Sphere.cpp" />
-    <ClCompile Include="src\Geometry\Rect\Rect.cpp" />
-    <ClCompile Include="src\Geometry\Rect\ParallelRect\ParallelRect.cpp" />
     <ClCompile Include="src\Geometry\Line\Line.cpp" />
     <ClCompile Include="src\PhysicsModel\Physical\CompletelyPhysical.cpp" />
     <ClCompile Include="src\Camera\IsometricCamera\IsometricCamera.cpp" />

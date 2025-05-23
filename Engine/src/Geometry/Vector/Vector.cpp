@@ -19,12 +19,7 @@ geom::Vector::Vector(const Point& start, const Point& end)
 
 geom::Vector::Vector(const Line& line, bool head_to_start)
 {
-	Point start = head_to_start ? line.end() : line.start();
-	Point end = head_to_start ? line.start() : line.end();
-	x_ = end.x() - start.x();
-	y_ = end.y() - start.y();
-	z_ = end.z() - start.z();
-	q_ = end.q() - start.q();
+	fromLine(line, head_to_start);
 }
 
 const geom::Vector& geom::Vector::cord(AXIS axis, int value) {
@@ -66,9 +61,32 @@ int geom::Vector::z() const		{ return z_; }
 const geom::Vector& geom::Vector::q(int value) { q_ = value; }
 int geom::Vector::q() const { return q_; }
 
+const geom::Line& geom::Vector::toLine() const
+{
+	return *(new Line(*this));
+}
+
 const geom::Point& geom::Vector::toPoint() const
 {
 	return *(new Point(x_, y_, z_, q_));
+}
+
+void geom::Vector::fromLine(const Line& line, bool head_to_start = false)
+{
+	Point start = head_to_start ? line.end() : line.start();
+	Point end = head_to_start ? line.start() : line.end();
+	x_ = end.x() - start.x();
+	y_ = end.y() - start.y();
+	z_ = end.z() - start.z();
+	q_ = end.q() - start.q();
+}
+
+void geom::Vector::fromPoint(const Point& point)
+{
+	x_ = point.x();
+	y_ = point.y();
+	z_ = point.z();
+	q_ = point.q();
 }
 
 const geom::Vector& geom::Vector::distance(unsigned int value)

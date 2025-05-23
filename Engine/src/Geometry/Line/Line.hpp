@@ -18,8 +18,8 @@ namespace geom {
 		const Line& end(const Point& point);
 		const Point& end() const;
 
-		const Line& reverse();
-		const Line& reversed();
+		void reverse();
+		const Line& reversed() const;
 
 		const Vector& toVector(bool head_to_start=false) const;
 		void fromVector(const Vector& vector);

@@ -1,3 +1,6 @@
+#ifndef AXIS_HPP
+#define AXIS_HPP
+
 namespace geom {
 	enum AXIS {
 		X,
@@ -6,3 +9,5 @@ namespace geom {
 		Q
 	};
 }
+
+#endif // !AXIS_HPP

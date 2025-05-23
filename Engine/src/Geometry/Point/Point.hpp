@@ -7,6 +7,7 @@ namespace geom {
 	struct Point
 	{
 	public:
+		Point() : x_(0), y_(0), z_(0), q_(0) {}
 		Point(int x, int y, int z, int q)
 			: x_(x), y_(y), z_(z), q_(q) {};
 
@@ -21,16 +22,14 @@ namespace geom {
 		const Point& q(int value);
 		int q() const;
 
-		const Vector& toVector();
+		const Vector& toVector() const;
 
-		const Point& copy(const Point& other);
-		const Point& copy(Point&& other);
+		void fromVector(const Vector& obj);
+
 		unsigned int getDistance(const Point& obj) const;
 		unsigned int getDistanceHorizontal(const Point& obj) const;
 		const Vector& getRelative(const Point& obj) const;
-		const Vector& getRelative(float angle, unsigned int distance) const;
 		const Point& createRelative(const Vector& vector) const;
-		const Point& createRelative(float angle, unsigned int distance) const;
 	private:
 		int x_, y_, z_, q_;
 	};

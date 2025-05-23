@@ -8,21 +8,27 @@ namespace geom {
 	{
 	public:
 		Hexagon(const Point& point,
-			unsigned radius, unsigned height) :
-			point_(point), radius_(radius), height_(height) {}
+			unsigned xsize, unsigned ysize, unsigned zsize, unsigned qsize) :
+			point_(point),
+			xsize_(xsize), ysize_(ysize), zsize_(zsize), qsize_(qsize) {}
 		Hexagon(int x, int y, int z, int q,
-			unsigned radius, unsigned height) :
-			point_(x, y, z, q), radius_(radius), height_(height) {}
+			unsigned xsize, unsigned ysize, unsigned zsize, unsigned qsize) :
+			point_(x, y, z, q),
+			xsize_(xsize), ysize_(ysize), zsize_(zsize), qsize_(qsize) {}
 		
 		const Point& point();
 		void point(const Point& point);
-		unsigned radius();
-		void radius(unsigned value);
-		unsigned height();
-		void height(unsigned value);
+		unsigned xSize();
+		void xSize(unsigned value);
+		unsigned ySize();
+		void ySize(unsigned value);
+		unsigned zSize();
+		void zSize(unsigned value);
+		unsigned qSize();
+		void qSize(unsigned value);
 	private:
 		Point point_;
-		unsigned int radius_, height_;
+		unsigned int xsize_, ysize_, zsize_, qsize_;
 	};
 }
 

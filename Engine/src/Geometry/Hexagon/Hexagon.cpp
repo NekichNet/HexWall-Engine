@@ -10,22 +10,42 @@ void geom::Hexagon::point(const Point& point)
     point_ = point;
 }
 
-unsigned geom::Hexagon::radius()
+unsigned geom::Hexagon::xSize()
 {
-    return radius_;
+    return xsize_;
 }
 
-void geom::Hexagon::radius(unsigned value)
+void geom::Hexagon::xSize(unsigned value)
 {
-    radius_ = value;
+    xsize_ = value;
 }
 
-unsigned geom::Hexagon::height()
+unsigned geom::Hexagon::ySize()
 {
-    return height_;
+    return ysize_;
 }
 
-void geom::Hexagon::height(unsigned value)
+void geom::Hexagon::ySize(unsigned value)
 {
-    height_ = value;
+    ysize_ = value;
+}
+
+unsigned geom::Hexagon::zSize()
+{
+    return zsize_;
+}
+
+void geom::Hexagon::zSize(unsigned value)
+{
+    zsize_ = value;
+}
+
+unsigned geom::Hexagon::qSize()
+{
+    return qsize_;
+}
+
+void geom::Hexagon::qSize(unsigned value)
+{
+    qsize_ = value;
 }
