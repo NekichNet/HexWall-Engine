@@ -1,4 +1,5 @@
 #include "Hexagon.hpp"
+#include "math.h"
 
 const geom::Point& geom::Hexagon::point()
 {
@@ -48,4 +49,10 @@ unsigned geom::Hexagon::qSize()
 void geom::Hexagon::qSize(unsigned value)
 {
     qsize_ = value;
+}
+
+bool geom::Hexagon::contains(const Point& point) const
+{
+    return (abs(point.x() - point_.x()) <= xsize ||
+        )
 }

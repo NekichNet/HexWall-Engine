@@ -26,6 +26,9 @@ namespace geom {
 		void zSize(unsigned value);
 		unsigned qSize();
 		void qSize(unsigned value);
+
+		bool contains(const Point& point) const;
+
 	private:
 		Point point_;
 		unsigned int xsize_, ysize_, zsize_, qsize_;
