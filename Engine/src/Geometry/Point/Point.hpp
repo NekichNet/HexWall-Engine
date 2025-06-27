@@ -11,25 +11,27 @@ namespace geom {
 		Point(int x, int y, int z, int q)
 			: x_(x), y_(y), z_(z), q_(q) {};
 
-		const Point& cord(AXIS axis, unsigned int value);
+		Point& cord(AXIS axis, unsigned int value);
 		int cord(AXIS axis);
-		const Point& x(int value);
+		Point& x(int value);
 		int x() const;
-		const Point& y(int value);
+		Point& y(int value);
 		int y() const;
-		const Point& z(int value);
+		Point& z(int value);
 		int z() const;
-		const Point& q(int value);
+		Point& q(int value);
 		int q() const;
 
-		const Vector& toVector() const;
+		void moveBy(const Vector& vector);
+
+		Vector& toVector() const;
 
 		void fromVector(const Vector& obj);
 
 		unsigned int getDistance(const Point& obj) const;
 		unsigned int getDistanceHorizontal(const Point& obj) const;
-		const Vector& getRelative(const Point& obj) const;
-		const Point& createRelative(const Vector& vector) const;
+		Vector& getRelative(const Point& obj) const;
+		Point& createRelative(const Vector& vector) const;
 	private:
 		int x_, y_, z_, q_;
 	};

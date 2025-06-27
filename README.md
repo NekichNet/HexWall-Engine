@@ -1,8 +1,8 @@
 # HexWall-Engine
 
-A game engine includes isometric camera class implemented with glfw library, hexagonal metric system, level-by-level gameplay, easy customizable physics for hex-shaped objects, input-listener, and editor app for objects, structures and levels.
+A game engine includes isometric camera class implemented with SFML library, hexagonal metric system, level-by-level gameplay, easy customizable physics for hex-shaped objects, input-listener.
 
-I prefer GLFW as graphic library and [FMOD-Audio-Engine](https://github.com/rosshoyt/FMOD-Audio-Engine) because of simple implementation and due to the amount of reference material.
+I prefer [SFML](https://www.sfml-dev.org/tutorials/3.0/) as graphic library and [FMOD-Audio-Engine](https://github.com/rosshoyt/FMOD-Audio-Engine/) because of simple implementation and due to the amount of reference material.
 
 You can track developing progress with [Kanban board](https://evstropov.kaiten.ru/space/538381/boards).
 

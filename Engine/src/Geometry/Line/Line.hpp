@@ -12,17 +12,19 @@ namespace geom {
 			: start_(start), end_(end) {}
 		Line(const Vector& vector);
 
-		const Line& set(const Point& start, const Point& end);
-		const Line& start(const Point& point);
-		const Point& start() const;
-		const Line& end(const Point& point);
-		const Point& end() const;
+		Line& set(const Point& start, const Point& end);
+		Line& start(const Point& point);
+		Point start() const;
+		Line& end(const Point& point);
+		Point end() const;
 
 		void reverse();
-		const Line& reversed() const;
+		Line reversed() const;
 
-		const Vector& toVector(bool head_to_start=false) const;
+		Vector toVector(bool head_to_start=false) const;
 		void fromVector(const Vector& vector);
+
+		unsigned int length() const;
 	private:
 		Point start_, end_;
 	};

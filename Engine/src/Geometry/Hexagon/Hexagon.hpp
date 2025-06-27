@@ -2,6 +2,7 @@
 #define HEXAGON_HPP
 
 #include "../Point/Point.hpp"
+#include "../Vector/Vector.hpp"
 
 namespace geom {
 	struct Hexagon
@@ -10,13 +11,13 @@ namespace geom {
 		Hexagon(const Point& point,
 			unsigned xsize, unsigned ysize, unsigned zsize, unsigned qsize) :
 			point_(point),
-			xsize_(xsize), ysize_(ysize), zsize_(zsize), qsize_(qsize) {}
+			xSize_(xsize), ySize_(ysize), zSize_(zsize), qSize_(qsize) {}
 		Hexagon(int x, int y, int z, int q,
 			unsigned xsize, unsigned ysize, unsigned zsize, unsigned qsize) :
 			point_(x, y, z, q),
-			xsize_(xsize), ysize_(ysize), zsize_(zsize), qsize_(qsize) {}
+			xSize_(xsize), ySize_(ysize), zSize_(zsize), qSize_(qsize) {}
 		
-		const Point& point();
+		Point& point();
 		void point(const Point& point);
 		unsigned xSize();
 		void xSize(unsigned value);
@@ -29,9 +30,12 @@ namespace geom {
 
 		bool contains(const Point& point) const;
 
+		bool overlaps(const Hexagon& other) const;
+		bool overlapsOnWay(const Vector& vector, const Hexagon& other) const;
+
 	private:
 		Point point_;
-		unsigned int xsize_, ysize_, zsize_, qsize_;
+		unsigned int xSize_, ySize_, zSize_, qSize_;
 	};
 }
 

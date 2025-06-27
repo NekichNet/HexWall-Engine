@@ -14,47 +14,47 @@ namespace geom {
 		Vector(const Point& start, const Point& end);
 		Vector(const Line& line, bool head_to_start=false);
 
-		const Vector& cord(AXIS axis, int value);
+		Vector(const Vector& other)
+			: x_(other.x_), y_(other.y_), z_(other.z_), q_(other.q_) {}
+		Vector(Vector&& other)
+			: x_(other.x_), y_(other.y_), z_(other.z_), q_(other.q_) {}
+
+		Vector& cord(AXIS axis, int value);
 		int cord(AXIS axis) const;
-		const Vector& x(int value);
+		Vector& x(int value);
 		int x() const;
-		const Vector& y(int value);
+		Vector& y(int value);
 		int y() const;
-		const Vector& z(int value);
+		Vector& z(int value);
 		int z() const;
-		const Vector& q(int value);
+		Vector& q(int value);
 		int q() const;
 
-		const Line& toLine() const;
-		const Point& toPoint() const;
+		Line toLine() const;
+		Point toPoint() const;
 
 		void fromLine(const Line& line, bool head_to_start = false);
 		void fromPoint(const Point& point);
 
-		const Vector& distance(unsigned int value);
-		unsigned int distance() const;
+		Vector& length(unsigned int value);
+		unsigned int length() const;
 
-		friend const Vector& operator+(const Vector& a, const Vector& b);
-		friend const Vector& operator+(const Vector& a, int b);
-		friend const Vector& operator+(int a, const Vector& b);
+		Vector& operator=(const Vector& other);
+		Vector& operator=(Vector&& other) noexcept;
 
-		friend const Vector& operator-(const Vector& a, const Vector& b);
-		friend const Vector& operator-(const Vector& a, int b);
-		friend const Vector& operator-(int a, const Vector& b);
+		friend Vector operator+(const Vector& a, const Vector& b);
 
-		friend const Vector& operator*(const Vector& a, const Vector& b);
-		friend const Vector& operator*(const Vector& a, float b);
-		friend const Vector& operator*(float a, const Vector& b);
+		friend Vector operator-(const Vector& a, const Vector& b);
 
-		friend const Vector& operator/(const Vector& a, const Vector& b);
-		friend const Vector& operator/(const Vector& a, int b);
-		friend const Vector& operator/(int a, const Vector& b);
+		friend Vector operator*(const Vector& a, const Vector& b);
+		friend Vector operator*(const Vector& a, float b);
+
+		friend Vector operator/(const Vector& a, const Vector& b);
+		friend Vector operator/(const Vector& a, float b);
 
 		Vector& operator+=(const Vector& other);
-		Vector& operator+=(int other);
 
 		Vector& operator-=(const Vector& other);
-		Vector& operator-=(int other);
 
 		Vector& operator*=(const Vector& other);
 		Vector& operator*=(float other);

@@ -22,7 +22,7 @@ geom::Vector::Vector(const Line& line, bool head_to_start)
 	fromLine(line, head_to_start);
 }
 
-const geom::Vector& geom::Vector::cord(AXIS axis, int value) {
+geom::Vector& geom::Vector::cord(AXIS axis, int value) {
 	switch (axis) {
 	case geom::AXIS::X:
 		x_ = value; break;
@@ -49,26 +49,26 @@ int geom::Vector::cord(AXIS axis) const
 	}
 }
 
-const geom::Vector& geom::Vector::x(int value)	{ x_ = value; }
+geom::Vector& geom::Vector::x(int value)	{ x_ = value; }
 int geom::Vector::x() const		{ return x_; }
 
-const geom::Vector& geom::Vector::y(int value)	{ y_ = value; }
+geom::Vector& geom::Vector::y(int value)	{ y_ = value; }
 int geom::Vector::y() const		{ return y_; }
 
-const geom::Vector& geom::Vector::z(int value)	{ z_ = value; }
+geom::Vector& geom::Vector::z(int value)	{ z_ = value; }
 int geom::Vector::z() const		{ return z_; }
 
-const geom::Vector& geom::Vector::q(int value) { q_ = value; }
+geom::Vector& geom::Vector::q(int value) { q_ = value; }
 int geom::Vector::q() const { return q_; }
 
-const geom::Line& geom::Vector::toLine() const
+geom::Line geom::Vector::toLine() const
 {
-	return *(new Line(*this));
+	return Line(*this);
 }
 
-const geom::Point& geom::Vector::toPoint() const
+geom::Point geom::Vector::toPoint() const
 {
-	return *(new Point(x_, y_, z_, q_));
+	return Point(x_, y_, z_, q_);
 }
 
 void geom::Vector::fromLine(const Line& line, bool head_to_start = false)
@@ -89,21 +89,119 @@ void geom::Vector::fromPoint(const Point& point)
 	q_ = point.q();
 }
 
-const geom::Vector& geom::Vector::distance(unsigned int value)
+geom::Vector& geom::Vector::length(unsigned int value)
 {
-	float coef = value / distance();
+	float coef = value / length();
 	x_ *= coef;
 	y_ *= coef;
 	z_ *= coef;
 	q_ *= coef;
+	return *this;
 }
 
-unsigned int geom::Vector::distance() const
+unsigned int geom::Vector::length() const
 {
-	return std::abs(x_) + std::abs(y_) + std::abs(z_) + std::abs(q_);
+	return sqrt(pow(x_, 2) + pow(y_, 2) + pow(z_, 2) + pow(q_, 2));
 }
 
-const geom::Vector& geom::operator+(const Vector& a, const Vector& b)
+geom::Vector& geom::Vector::operator=(const Vector& other)
 {
-	return *(new geom::Vector(a.x_ + b.x_, a.y_ + b.y_, a.z_ + b.z_, a.q_ + b.q_));
+	x_ = other.x_;
+	y_ = other.y_;
+	z_ = other.z_;
+	q_ = other.q_;
+	return *this;
+}
+
+geom::Vector& geom::Vector::operator=(Vector&& other) noexcept
+{
+	x_ = other.x_;
+	y_ = other.y_;
+	z_ = other.z_;
+	q_ = other.q_;
+	return *this;
+}
+
+geom::Vector geom::operator+(const Vector& a, const Vector& b)
+{
+	return Vector(a.x_ + b.x_, a.y_ + b.y_, a.z_ + b.z_, a.q_ + b.q_);
+}
+
+geom::Vector geom::operator-(const Vector& a, const Vector& b)
+{
+	return Vector(a.x_ - b.x_, a.y_ - b.y_, a.z_ - b.z_, a.q_ - b.q_);
+}
+
+geom::Vector geom::operator*(const Vector& a, const Vector& b)
+{
+	return Vector(a.x_ * b.x_, a.y_ * b.y_, a.z_ * b.z_, a.q_ * b.q_);
+}
+
+geom::Vector geom::operator*(const Vector& a, float b)
+{
+	return Vector(a.x_ * b, a.y_ * b, a.z_ * b, a.q_ * b);
+}
+
+geom::Vector geom::operator/(const Vector& a, const Vector& b)
+{
+	return Vector(a.x_ / b.x_, a.y_ / b.y_, a.z_ / b.z_, a.q_ / b.q_);
+}
+
+geom::Vector geom::operator/(const Vector& a, float b)
+{
+	return Vector(a.x_ / b, a.y_ / b, a.z_ / b, a.q_ / b);
+}
+
+geom::Vector& geom::Vector::operator+=(const Vector& other)
+{
+	x_ += other.x_;
+	y_ += other.y_;
+	z_ += other.z_;
+	q_ += other.q_;
+	return *this;
+}
+
+geom::Vector& geom::Vector::operator-=(const Vector& other)
+{
+	x_ -= other.x_;
+	y_ -= other.y_;
+	z_ -= other.z_;
+	q_ -= other.q_;
+	return *this;
+}
+
+geom::Vector& geom::Vector::operator*=(const Vector& other)
+{
+	x_ *= other.x_;
+	y_ *= other.y_;
+	z_ *= other.z_;
+	q_ *= other.q_;
+	return *this;
+}
+
+geom::Vector& geom::Vector::operator*=(float other)
+{
+	x_ *= other;
+	y_ *= other;
+	z_ *= other;
+	q_ *= other;
+	return *this;
+}
+
+geom::Vector& geom::Vector::operator/=(const Vector& other)
+{
+	x_ /= other.x_;
+	y_ /= other.y_;
+	z_ /= other.z_;
+	q_ /= other.q_;
+	return *this;
+}
+
+geom::Vector& geom::Vector::operator/=(float other)
+{
+	x_ /= other;
+	y_ /= other;
+	z_ /= other;
+	q_ /= other;
+	return *this;
 }

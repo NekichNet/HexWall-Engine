@@ -5,7 +5,7 @@
 
 using namespace engine_math;
 
-const geom::Point& geom::Point::cord(AXIS axis, unsigned int value)
+geom::Point& geom::Point::cord(AXIS axis, unsigned int value)
 {
 	switch (axis) {
 	case geom::AXIS::X:
@@ -33,16 +33,24 @@ int geom::Point::cord(AXIS axis)
 	}
 }
 
-const geom::Point& geom::Point::x(int value) { x_ = value; }
+geom::Point& geom::Point::x(int value) { x_ = value; }
 int geom::Point::x() const { return x_; }
-const geom::Point& geom::Point::y(int value) { y_ = value; }
+geom::Point& geom::Point::y(int value) { y_ = value; }
 int geom::Point::y() const { return y_; }
-const geom::Point& geom::Point::z(int value) { z_ = value; }
+geom::Point& geom::Point::z(int value) { z_ = value; }
 int geom::Point::z() const { return z_; }
-const geom::Point& geom::Point::q(int value) { q_ = value; }
+geom::Point& geom::Point::q(int value) { q_ = value; }
 int geom::Point::q() const { return q_; }
 
-const geom::Vector& geom::Point::toVector() const
+void geom::Point::moveBy(const Vector& vector)
+{
+	x_ += vector.x();
+	y_ += vector.y();
+	z_ += vector.z();
+	q_ += vector.q();
+}
+
+geom::Vector& geom::Point::toVector() const
 {
 	return *(new Vector(*this));
 }
@@ -70,7 +78,7 @@ unsigned int geom::Point::getDistanceHorizontal(const Point& obj) const
 		pow(std::max(obj.q_, q_) - std::min(obj.q_, q_), 2));
 }
 
-const geom::Vector& geom::Point::getRelative(const Point& obj) const
+geom::Vector& geom::Point::getRelative(const Point& obj) const
 {
 	return *(new Vector(
 		abs(obj.x_ - x_),
@@ -80,7 +88,7 @@ const geom::Vector& geom::Point::getRelative(const Point& obj) const
 	));
 }
 
-const Point& geom::Point::createRelative(const Vector& vector) const
+geom::Point& geom::Point::createRelative(const Vector& vector) const
 {
 	// TODO: вставьте здесь оператор return
 }

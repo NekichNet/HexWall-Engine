@@ -18,13 +18,7 @@
     <ClInclude Include="src\Geometry\Vector\Vector.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="src\Object\Object.hpp">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="src\PhysicsModel\PhysicsModel.hpp">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Effect\iEffect.hpp">
+    <ClInclude Include="src\PhysicsObject\PhysicsObject.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="src\Camera\iCamera.hpp">
@@ -33,7 +27,7 @@
     <ClInclude Include="src\Camera\IsometricCamera\IsometricCamera.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="src\PhysicsModel\Physical\CompletelyPhysical.hpp">
+    <ClInclude Include="src\PhysicsObject\InertialObject\InertialObject.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="src\Geometry\Axis.hpp">
@@ -45,25 +39,7 @@
     <ClInclude Include="src\Geometry\Line\Line.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="src\Geometry\Rect\ParallelRect\ParallelRect.hpp">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Geometry\Rect\Rect.hpp">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="src\Math\Math.hpp">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Geometry\iParallel.hpp">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Geometry\Sphere\Sphere.hpp">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Geometry\Cylinder\Cylinder.hpp">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Geometry\Closest\Closest.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="src\Geometry\Hexagon\Hexagon.hpp">
@@ -74,37 +50,19 @@
     <ClCompile Include="src\Geometry\Vector\Vector.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="src\Object\Object.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="src\Camera\IsometricCamera\IsometricCamera.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="src\PhysicsModel\Physical\CompletelyPhysical.cpp">
+    <ClCompile Include="src\PhysicsObject\InertialObject\InertialObject.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="src\PhysicsModel\PhysicsModel.cpp">
+    <ClCompile Include="src\PhysicsObject\PhysicsObject.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="src\Geometry\Line\Line.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="src\Geometry\Point\Point.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Geometry\Rect\ParallelRect\ParallelRect.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Geometry\Rect\Rect.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Geometry\Sphere\Sphere.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Geometry\Cylinder\Cylinder.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Geometry\Closest\Closest.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="src\Geometry\Hexagon\Hexagon.cpp">
