@@ -5,29 +5,38 @@
 #include "../Line/Line.hpp"
 #include "../Axis.hpp"
 
-namespace geom {
+namespace HexGeometry {
 	struct Vector {
 	public:
-		Vector(int x, int y, int z, int q)
-			: x_(x), y_(y), z_(z), q_(q) {}
+		Vector()
+			: _x(0), _y(0), _z(0), _q(0) {}
 		Vector(const Point& point);
 		Vector(const Point& start, const Point& end);
 		Vector(const Line& line, bool head_to_start=false);
 
 		Vector(const Vector& other)
-			: x_(other.x_), y_(other.y_), z_(other.z_), q_(other.q_) {}
+			: _x(other._x), _y(other._y), _z(other._z), _q(other._q) {}
 		Vector(Vector&& other)
-			: x_(other.x_), y_(other.y_), z_(other.z_), q_(other.q_) {}
+			: _x(other._x), _y(other._y), _z(other._z), _q(other._q) {}
 
 		Vector& cord(AXIS axis, int value);
+		Vector& moveCord(AXIS axis, int value);
 		int cord(AXIS axis) const;
+
 		Vector& x(int value);
+		Vector& moveX(int value);
 		int x() const;
+
 		Vector& y(int value);
+		Vector& moveY(int value);
 		int y() const;
+
 		Vector& z(int value);
+		Vector& moveZ(int value);
 		int z() const;
+
 		Vector& q(int value);
+		Vector& moveQ(int value);
 		int q() const;
 
 		Line toLine() const;
@@ -36,8 +45,8 @@ namespace geom {
 		void fromLine(const Line& line, bool head_to_start = false);
 		void fromPoint(const Point& point);
 
-		Vector& length(unsigned int value);
-		unsigned int length() const;
+		// Vector& length(unsigned int value);
+		// unsigned int length() const;
 
 		Vector& operator=(const Vector& other);
 		Vector& operator=(Vector&& other) noexcept;
@@ -62,7 +71,7 @@ namespace geom {
 		Vector& operator/=(const Vector& other);
 		Vector& operator/=(float other);
 	private:
-		int x_, y_, z_, q_;
+		int _x, _y, _z, _q;
 	};
 }
 

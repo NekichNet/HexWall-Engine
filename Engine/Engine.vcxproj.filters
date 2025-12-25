@@ -15,57 +15,36 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Geometry\Vector\Vector.hpp">
+    <ClInclude Include="Geometry\Vector\Vector.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="src\PhysicsObject\PhysicsObject.hpp">
+    <ClInclude Include="Geometry\Axis.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="src\Camera\iCamera.hpp">
+    <ClInclude Include="Geometry\Point\Point.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="src\Camera\IsometricCamera\IsometricCamera.hpp">
+    <ClInclude Include="Geometry\Line\Line.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="src\PhysicsObject\InertialObject\InertialObject.hpp">
+    <ClInclude Include="Math\Math.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="src\Geometry\Axis.hpp">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Geometry\Point\Point.hpp">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Geometry\Line\Line.hpp">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Math\Math.hpp">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Geometry\Hexagon\Hexagon.hpp">
+    <ClInclude Include="Geometry\Hexagon\Hexagon.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Geometry\Vector\Vector.cpp">
+    <ClCompile Include="Geometry\Vector\Vector.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="src\Camera\IsometricCamera\IsometricCamera.cpp">
+    <ClCompile Include="Geometry\Line\Line.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="src\PhysicsObject\InertialObject\InertialObject.cpp">
+    <ClCompile Include="Geometry\Point\Point.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="src\PhysicsObject\PhysicsObject.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Geometry\Line\Line.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Geometry\Point\Point.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Geometry\Hexagon\Hexagon.cpp">
+    <ClCompile Include="Geometry\Hexagon\Hexagon.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

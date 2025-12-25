@@ -1,7 +1,7 @@
 #ifndef AXIS_HPP
 #define AXIS_HPP
 
-namespace geom {
+namespace HexGeometry {
 	enum AXIS {
 		X,
 		Y,

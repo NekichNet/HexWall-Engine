@@ -4,12 +4,12 @@
 #include "../Vector/Vector.hpp"
 #include "../Point/Point.hpp"
 
-namespace geom {
+namespace HexGeometry {
 	struct Line
 	{
 	public:
 		Line(const Point& start, const Point& end)
-			: start_(start), end_(end) {}
+			: _start(start), _end(end) {}
 		Line(const Vector& vector);
 
 		Line& set(const Point& start, const Point& end);
@@ -24,9 +24,9 @@ namespace geom {
 		Vector toVector(bool head_to_start=false) const;
 		void fromVector(const Vector& vector);
 
-		unsigned int length() const;
+		// unsigned int length() const;
 	private:
-		Point start_, end_;
+		Point _start, _end;
 	};
 }
 

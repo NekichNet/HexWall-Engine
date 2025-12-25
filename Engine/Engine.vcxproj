@@ -141,25 +141,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Geometry\Hexagon\Hexagon.hpp" />
-    <ClInclude Include="src\Geometry\Axis.hpp" />
-    <ClInclude Include="src\Geometry\Line\Line.hpp" />
-    <ClInclude Include="src\Math\Math.hpp" />
-    <ClInclude Include="src\PhysicsObject\InertialObject\InertialObject.hpp" />
-    <ClInclude Include="src\Camera\IsometricCamera\IsometricCamera.hpp" />
-    <ClInclude Include="src\Camera\iCamera.hpp" />
-    <ClInclude Include="src\Geometry\Point\Point.hpp" />
-    <ClInclude Include="src\Geometry\Vector\Vector.hpp" />
-    <ClInclude Include="src\PhysicsObject\PhysicsObject.hpp" />
+    <ClInclude Include="Geometry\Axis.hpp" />
+    <ClInclude Include="Geometry\Hexagon\Hexagon.hpp" />
+    <ClInclude Include="Geometry\Line\Line.hpp" />
+    <ClInclude Include="Math\Math.hpp" />
+    <ClInclude Include="Geometry\Point\Point.hpp" />
+    <ClInclude Include="Geometry\Vector\Vector.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Geometry\Hexagon\Hexagon.cpp" />
-    <ClCompile Include="src\Geometry\Line\Line.cpp" />
-    <ClCompile Include="src\PhysicsObject\InertialObject\InertialObject.cpp" />
-    <ClCompile Include="src\Camera\IsometricCamera\IsometricCamera.cpp" />
-    <ClCompile Include="src\Geometry\Point\Point.cpp" />
-    <ClCompile Include="src\Geometry\Vector\Vector.cpp" />
-    <ClCompile Include="src\PhysicsObject\PhysicsObject.cpp" />
+    <ClCompile Include="Geometry\Hexagon\Hexagon.cpp" />
+    <ClCompile Include="Geometry\Line\Line.cpp" />
+    <ClCompile Include="Geometry\Point\Point.cpp" />
+    <ClCompile Include="Geometry\Vector\Vector.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
